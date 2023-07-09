@@ -1,6 +1,17 @@
 #include <iostream>
 #include <string>
-// Base class
+
+/*
+ * Auther: Aman Arabzadeh
+ * Date: 2023-07-09
+ *  Example of inheritance in object-oriented programming using C++.
+ *  Read more here:
+ *  https://github.com/AMAN-ARABZADEH/Inheritance_Cpp/tree/main
+ */
+
+
+// Base class Vehicle
+
 class Vehicle {
 protected:
     std::string brand{};         // Brand of the vehicle
@@ -9,59 +20,104 @@ protected:
     int numWheels{};             // Number of wheels
 
 public:
-    // Default constructor
+    /**
+     * @brief Default Construct a new Vehicle object
+     *
+     */
     Vehicle() {
         std::cout << "Vehicle object created!" << std::endl;
     }
 
-    // Parameterized constructor
+    /**
+     * @brief Construct a new Vehicle object
+     *
+     * @param brand The brand of the vehicle
+     * @param vehicleType The type of the vehicle
+     * @param color The color of the vehicle
+     * @param numWheels The number of wheels the vehicle has
+     */
     Vehicle(std::string brand, std::string vehicleType, std::string color, int numWheels)
             : brand(brand), vehicleType(vehicleType), color(color), numWheels(numWheels) {
         std::cout << "Vehicle object created with brand: " << brand << ", type: " << vehicleType
                   << ", color: " << color << ", wheels: " << numWheels << std::endl;
     }
+    // Getter and setter methods for brand, vehicleType, color, and numWheels
 
-    // Getter method for brand (const member function)
+    /**
+     * @brief Get the brand of the vehicle
+     *
+     * @return The brand of the vehicle
+     */
     std::string getBrand() const {
         return brand;
     }
 
-    // Setter method for brand
+    /**
+     * @brief Set the brand of the vehicle
+     *
+     * @param brand The brand of the vehicle
+     */
     void setBrand(std::string brand) {
         this->brand = brand;
     }
 
-    // Getter method for vehicleType (const member function)
+    /**
+     * @brief Get the vehicle type
+     *
+     * @return The type of the vehicle
+     */
     std::string getVehicleType() const {
         return vehicleType;
     }
 
-    // Setter method for vehicleType
+    /**
+     * @brief Set the vehicle type
+     *
+     * @param vehicleType The type of the vehicle
+     */
     void setVehicleType(std::string vehicleType) {
         this->vehicleType = vehicleType;
     }
 
-    // Getter method for color (const member function)
+    /**
+     * @brief Get the color of the vehicle
+     *
+     * @return The color of the vehicle
+     */
     std::string getColor() const {
         return color;
     }
 
-    // Setter method for color
+    /**
+     * @brief Set the color of the vehicle
+     *
+     * @param color The color of the vehicle
+     */
     void setColor(std::string color) {
         this->color = color;
     }
 
-    // Getter method for numWheels (const member function)
+    /**
+     * @brief Get the number of wheels of the vehicle
+     *
+     * @return The number of wheels
+     */
     int getNumWheels() const {
         return numWheels;
     }
 
-    // Setter method for numWheels
+    /**
+     * @brief Set the number of wheels of the vehicle
+     *
+     * @param numWheels The number of wheels
+     */
     void setNumWheels(int numWheels) {
         this->numWheels = numWheels;
     }
 
-    // Honk the vehicle's horn
+    /**
+     * @brief Honk the vehicle's horn
+     */
     void honk() const {
         std::cout << "Honk! Honk!" << std::endl;
     }
@@ -73,24 +129,42 @@ private:
     std::string model{};    // Model of the car
 
 public:
-    // Parameterized constructor
+    /**
+     * @brief Construct a new Car object
+     *
+     * @param brand The brand of the car
+     * @param vehicleType The type of the vehicle (car)
+     * @param color The color of the car
+     * @param numWheels The number of wheels the car has
+     * @param model The model of the car
+     */
     Car(std::string brand, std::string vehicleType, std::string color, int numWheels, std::string model)
             : Vehicle(brand, vehicleType, color, numWheels), model(model) {
         std::cout << "Car object created with brand: " << brand << ", type: " << vehicleType
                   << ", color: " << color << ", wheels: " << numWheels << ", model: " << model << std::endl;
     }
 
-    // Getter method for model (const member function)
+    /**
+     * @brief Get the model of the car
+     *
+     * @return The model of the car
+     */
     std::string getModel() const {
         return model;
     }
 
-    // Setter method for model
+    /**
+     * @brief Set the model of the car
+     *
+     * @param model The model of the car
+     */
     void setModel(std::string model) {
         this->model = model;
     }
 
-    // Drive the car
+    /**
+     * @brief Drive the car
+     */
     void drive() const {
         std::cout << "Driving the car!" << std::endl;
     }
@@ -102,49 +176,77 @@ private:
     std::string subtype{};    // Subtype of the motorcycle
 
 public:
-    // Parameterized constructor
+    /**
+     * @brief Construct a new Motorcycle object
+     *
+     * @param brand The brand of the motorcycle
+     * @param vehicleType The type of the vehicle (motorcycle)
+     * @param color The color of the motorcycle
+     * @param numWheels The number of wheels the motorcycle has
+     * @param subtype The subtype of the motorcycle
+     */
     Motorcycle(std::string brand, std::string vehicleType, std::string color, int numWheels, std::string subtype)
             : Vehicle(brand, vehicleType, color, numWheels), subtype(subtype) {
         std::cout << "Motorcycle object created with brand: " << brand << ", type: " << vehicleType
                   << ", color: " << color << ", wheels: " << numWheels << ", subtype: " << subtype << std::endl;
     }
 
-    // Getter method for subtype (const member function)
+    /**
+     * @brief Get the subtype of the motorcycle
+     *
+     * @return The subtype of the motorcycle
+     */
     std::string getSubtype() const {
         return subtype;
     }
 
-    // Setter method for subtype
+    /**
+     * @brief Set the subtype of the motorcycle
+     *
+     * @param subtype The subtype of the motorcycle
+     */
     void setSubtype(std::string subtype) {
         this->subtype = subtype;
     }
 
-    // Ride the motorcycle
+    /**
+     * @brief Ride the motorcycle
+     */
     void ride() const {
         std::cout << "Riding the motorcycle!" << std::endl;
     }
 };
 
+
 int main() {
     // Creating objects of derived classes
-    Car car("Ford", "Car", "Red", 4, "Mustang");
-    car.setBrand("Chevrolet");
-    car.setModel("Camaro");
+    Car car("Ferrari", "Car", "Red", 4, "LaFerrari");
+    car.setBrand("Ferrari");
+    car.setModel("LaFerrari");
 
-    Motorcycle motorcycle("Honda", "Motorcycle", "Blue", 2, "Sport");
-    motorcycle.setVehicleType("Cruiser");
+    Motorcycle motorcycle("The Best", "Motorcycle", "Silver", 2, "Superbike");
+    motorcycle.setVehicleType("Super Sport");
 
     // Accessing properties and methods
     std::cout << "Car: " << car.getBrand() << " " << car.getModel() << std::endl;
-    std::cout << "Type: " << car.getVehicleType() << ", Color: " << car.getColor() << ", Wheels: " << car.getNumWheels() << std::endl;
+    std::cout << "Type: " << car.getVehicleType() << ", Color: " << car.getColor() << ", Wheels: " << car.getNumWheels()
+              << std::endl;
     car.honk();
     car.drive();
 
     std::cout << "Motorcycle: " << motorcycle.getBrand() << " " << motorcycle.getSubtype() << std::endl;
-    std::cout << "Type: " << motorcycle.getVehicleType() << ", Color: " << motorcycle.getColor() << ", Wheels: " << motorcycle.getNumWheels() << std::endl;
+    std::cout << "Type: " << motorcycle.getVehicleType() << ", Color: " << motorcycle.getColor() << ", Wheels: "
+              << motorcycle.getNumWheels() << std::endl;
     motorcycle.honk();
     motorcycle.ride();
-/*
+
+
+
+    /// Explanation
+
+    std::cout << "\n\n\n================================COMMENTS====================================\n";
+
+
     // Explanation of inheritance
     std::cout << "Inheritance is a fundamental concept in object-oriented programming." << std::endl;
     std::cout << "It allows a class (derived class) to inherit properties and behaviors from another class (base class)." << std::endl;
@@ -166,6 +268,8 @@ int main() {
     std::cout << "which have their own unique properties (e.g., model for Car, subtype for Motorcycle)." << std::endl;
     std::cout << "By using inheritance, you can create a base class (Vehicle) that defines common attributes and behaviors," << std::endl;
     std::cout << "and then derive specialized classes (Car, Motorcycle) that inherit those common traits and add their own specific features." << std::endl;
-*/
+
+
+
     return 0;
 }
