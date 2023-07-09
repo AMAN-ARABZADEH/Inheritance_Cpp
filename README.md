@@ -63,7 +63,7 @@ To learn more about inheritance, you can refer to the following resources:
 
 - [Wikipedia: Inheritance (object-oriented programming)](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
 - [GeeksforGeeks: Inheritance in C++](https://www.geeksforgeeks.org/inheritance-in-c/)
-- [W3Schools: C++ Inheritance](https://www.w3schools.com/cpp/cpp_inheritance.php)
+- [W3Schools: C++ Inheritance](https://www.w3schools.com/cpp/cpp_inheritance.asp)
 - Books on C++ programming language and object-oriented programming concepts.
 
 
