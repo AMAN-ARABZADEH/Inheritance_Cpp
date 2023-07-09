@@ -3,6 +3,7 @@ Example of inheritance in object-oriented programming using C++.
 
 # Inheritance Example: Vehicles
 This repository I provides an example of inheritance in object-oriented programming using C++.
+<br>
 ![Inheritance Wikipedia](Multiple_Inheritance_Wikipedia.jpg)
 <br>
 *Image Source: [Wikipedia](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))*
