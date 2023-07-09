@@ -1,13 +1,12 @@
 #include <iostream>
 #include <string>
-
 // Base class
 class Vehicle {
 protected:
-    std::string brand{};
-    std::string vehicleType{};
-    std::string color{};
-    int numWheels{};
+    std::string brand{};         // Brand of the vehicle
+    std::string vehicleType{};   // Type of the vehicle
+    std::string color{};         // Color of the vehicle
+    int numWheels{};             // Number of wheels
 
 public:
     // Default constructor
@@ -62,6 +61,7 @@ public:
         this->numWheels = numWheels;
     }
 
+    // Honk the vehicle's horn
     void honk() const {
         std::cout << "Honk! Honk!" << std::endl;
     }
@@ -70,7 +70,7 @@ public:
 // Derived class Car
 class Car : public Vehicle {
 private:
-    std::string model;
+    std::string model{};    // Model of the car
 
 public:
     // Parameterized constructor
@@ -90,6 +90,7 @@ public:
         this->model = model;
     }
 
+    // Drive the car
     void drive() const {
         std::cout << "Driving the car!" << std::endl;
     }
@@ -98,7 +99,7 @@ public:
 // Derived class Motorcycle
 class Motorcycle : public Vehicle {
 private:
-    std::string subtype;
+    std::string subtype{};    // Subtype of the motorcycle
 
 public:
     // Parameterized constructor
@@ -118,6 +119,7 @@ public:
         this->subtype = subtype;
     }
 
+    // Ride the motorcycle
     void ride() const {
         std::cout << "Riding the motorcycle!" << std::endl;
     }
