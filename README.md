@@ -67,3 +67,9 @@ To learn more about inheritance, you can refer to the following resources:
 - Books on C++ programming language and object-oriented programming concepts.
 
 
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+
